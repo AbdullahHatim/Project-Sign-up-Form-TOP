@@ -8,15 +8,31 @@ body {
   display: flex;
 }
 
-section {
-  height: 100svh;
-}
 #side {
   width: 38%;
-  background-color: red;
+  height: 100svh;
+  background: url(assets/side.jpg) no-repeat;
+  background-size: 120%;
 }
 
 #main {
   width: 62%;
-  background-color: aqua;
+  height: 100svh;
+  background: url(assets/blurred.jpg);
+  background-size: 120%;
+  position: relative;
+  overflow: hidden;
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+#main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: transparent;
+  backdrop-filter: blur(30px);
 }
