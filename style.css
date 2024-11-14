@@ -1,5 +1,8 @@
 @import url(fonts/stylesheet.css);
 
+* {
+  box-sizing: border-box;
+}
 html {
   font-family: system-ui, sans-serif;
 }
