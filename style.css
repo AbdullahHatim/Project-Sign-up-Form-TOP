@@ -12,10 +12,36 @@ body {
 }
 
 #side {
+  display: flex;
+  flex-direction: column;
   width: 38%;
   height: 100svh;
-  background: url(assets/side.jpg) no-repeat;
+  background: url(assets/side.jpg) repeat-y;
   background-size: 120%;
+}
+
+#side > div {
+  display: flex;
+  background: #ffffff55;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-top: 25%;
+  margin-bottom: auto;
+  & img {
+    color: black;
+    height: 150px;
+    filter: brightness(0);
+  }
+
+  & h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+  }
+
+  & + p {
+    text-align: center;
+  }
 }
 
 #main {
